@@ -7,6 +7,6 @@ RUN make build
 
 FROM gcr.io/distroless/base-debian11 AS production-stage
 WORKDIR /
-COPY --from=build-stage /go/src/app/bin/controller /
+COPY --from=build-stage /go/src/app/bin/storage /
 USER nonroot:nonroot
-ENTRYPOINT ["/controller"]
+ENTRYPOINT ["/storage"]
