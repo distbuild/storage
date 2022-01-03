@@ -1,7 +1,7 @@
 # storage
 
 [![Build Status](https://github.com/distbuild/storage/workflows/CI/badge.svg?branch=main&event=push)](https://github.com/distbuild/storage/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/distbuild/storage/branch/main/graph/badge.svg?token=S78151LC5J)](https://codecov.io/gh/distbuild/storage)
+[![codecov](https://codecov.io/gh/distbuild/storage/branch/main/graph/badge.svg?token=TH43EUERSY)](https://codecov.io/gh/distbuild/storage)
 [![Go Report Card](https://goreportcard.com/badge/github.com/distbuild/storage)](https://goreportcard.com/report/github.com/distbuild/storage)
 [![License](https://img.shields.io/github/license/distbuild/storage.svg)](https://github.com/distbuild/storage/blob/main/LICENSE)
 [![Release](https://img.shields.io/github/release/distbuild/storage.svg)](https://github.com/distbuild/storage/releases/latest)
