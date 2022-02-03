@@ -5,6 +5,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/distbuild/storage)](https://goreportcard.com/report/github.com/distbuild/storage)
 [![License](https://img.shields.io/github/license/distbuild/storage.svg)](https://github.com/distbuild/storage/blob/main/LICENSE)
 [![Release](https://img.shields.io/github/release/distbuild/storage.svg)](https://github.com/distbuild/storage/releases/latest)
+[![Gitter chat](https://badges.gitter.im/craftslab/distbuild.png)](https://gitter.im/craftslab/distbuild)
 
 
 
