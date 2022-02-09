@@ -3,3 +3,4 @@ kind: storage
 metadata:
   name: storage
 spec:
+  foo: foo

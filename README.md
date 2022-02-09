@@ -1,23 +1,22 @@
 # storage
 
 [![Build Status](https://github.com/distbuild/storage/workflows/CI/badge.svg?branch=main&event=push)](https://github.com/distbuild/storage/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/distbuild/storage/branch/main/graph/badge.svg?token=TH43EUERSY)](https://codecov.io/gh/distbuild/storage)
-[![Go Report Card](https://goreportcard.com/badge/github.com/distbuild/storage)](https://goreportcard.com/report/github.com/distbuild/storage)
+[![codecov](https://codecov.io/gh/distbuild/storage/branch/main/graph/badge.svg?token=FM4NOMPT7Q)](https://codecov.io/gh/distbuild/storage)
 [![License](https://img.shields.io/github/license/distbuild/storage.svg)](https://github.com/distbuild/storage/blob/main/LICENSE)
-[![Release](https://img.shields.io/github/release/distbuild/storage.svg)](https://github.com/distbuild/storage/releases/latest)
+[![Tag](https://img.shields.io/github/tag/distbuild/storage.svg)](https://github.com/distbuild/storage/tags)
 [![Gitter chat](https://badges.gitter.im/craftslab/distbuild.png)](https://gitter.im/craftslab/distbuild)
 
 
 
 ## Introduction
 
-*storage* is the storage of [distbuild](https://github.com/distbuild) written in Go.
+*storage* is the build storage of [distbuild](https://github.com/distbuild) written in Rust.
 
 
 
 ## Prerequisites
 
-- Go >= 1.17.0
+- Rust >= 1.57.0
 
 
 
@@ -27,8 +26,8 @@
 git clone https://github.com/distbuild/storage.git
 
 cd storage
-version=latest make build
-./bin/storage --config-file="$PWD/config/config.yml"
+make build
+./target/release/storage --config-file="$PWD/src/config/config.yml"
 ```
 
 
@@ -39,8 +38,8 @@ version=latest make build
 git clone https://github.com/distbuild/storage.git
 
 cd storage
-version=latest make docker
-docker run -v "$PWD"/config:/tmp ghcr.io/distbuild/storage:latest --config-file="/tmp/config.yml"
+make docker
+docker run -v "$PWD"/src/config:/tmp ghcr.io/distbuild/storage:latest --config-file="/tmp/config.yml"
 ```
 
 
@@ -48,24 +47,22 @@ docker run -v "$PWD"/config:/tmp ghcr.io/distbuild/storage:latest --config-file=
 ## Usage
 
 ```
-usage: storage --config-file=CONFIG-FILE [<flags>]
+USAGE:
+    storage --config-file <NAME>
 
-distbuild storage
-
-Flags:
-  --help                     Show context-sensitive help (also try --help-long
-                             and --help-man).
-  --version                  Show application version.
-  --config-file=CONFIG-FILE  Config file (.yml)
+OPTIONS:
+    -c, --config-file <NAME>    Config file (.yml)
+    -h, --help                  Print help information
+    -V, --version               Print version information
 ```
 
 
 
 ## Settings
 
-*storage* parameters can be set in the directory [config](https://github.com/distbuild/storage/blob/main/config).
+*storage* parameters can be set in the directory [config](https://github.com/distbuild/storage/blob/main/src/config).
 
-An example of configuration in [config.yml](https://github.com/distbuild/storage/blob/main/config/config.yml):
+An example of configuration in [config.yml](https://github.com/distbuild/storage/blob/main/src/config/config.yml):
 
 ```yaml
 apiVersion: v1
@@ -73,6 +70,7 @@ kind: storage
 metadata:
   name: storage
 spec:
+  foo: foo
 ```
 
 
