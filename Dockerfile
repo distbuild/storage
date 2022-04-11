@@ -4,7 +4,6 @@ COPY . .
 RUN make install && \
     make build
 
-FROM gcr.io/distroless/base-debian11
+FROM scratch
 COPY --from=builder /usr/src/storage/target/release/storage /usr/local/bin/storage
-USER nonroot:nonroot
 ENTRYPOINT ["storage"]
